@@ -21,7 +21,7 @@ def load_cleaned_data():
 def get_standard_split(df_in, class_col, random_state=1234, train_pct=0.8):
 
     X_train, X_test, y_train, y_test = train_test_split(df_in.drop(columns=class_col), df_in[class_col],
-                                                        test_size=0.25, random_state=random_seed,
+                                                        test_size=0.25, random_state=random_state,
                                                         stratify=df_in[class_col])
 
     return X_train, X_test, y_train, y_test
